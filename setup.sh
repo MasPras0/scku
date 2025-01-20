@@ -797,7 +797,7 @@ if [ -f "/etc/afak.conf" ]; then
 rm /etc/afak.conf > /dev/null 2>&1
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/MasPras0/scku/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/MasPras0/scku/main/versi  )
 echo $serverV > /opt/.ver
 echo "00" > /home/daily_reboot
 aureb=$(cat /home/daily_reboot)
