@@ -572,17 +572,17 @@ fun_bar() {
 
 
 res2() {
-wget https://raw.githubusercontent.com/MasPras0/scku/install/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/MasPras0/scku/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 } 
 
 res3() {
-wget https://raw.githubusercontent.com/MasPras0/scku/install/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/MasPras0/scku/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 }
 
 res4() {
-wget https://raw.githubusercontent.com/MasPras0/scku/sshws/main/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/MasPras0/scku/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 }
 
