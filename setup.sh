@@ -202,7 +202,7 @@ APIGIT=$(cat /etc/github/api)
 EMAILGIT=$(cat /etc/github/email)
 USERGIT=$(cat /etc/github/username)
 hhari3=$(date -d "999 days" +"%Y-%m-%d")
-mkdir /root/listip
+mkdir -p /root/listip
 cd /root/listip
 wget https://raw.githubusercontent.com/MasPras0/ip/refs/heads/main/ip >/dev/null 2>&1
 
