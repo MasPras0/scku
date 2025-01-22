@@ -17,7 +17,7 @@ apt dist-upgrade -y
 apt install sudo -y
 sudo apt-get clean all
 apt install -y debconf-utils
-apt install haproxy -y
+sudo apt install haproxy -y
 apt install p7zip-full -y
 apt-get remove --purge ufw firewalld -y
 apt install gawk -y
