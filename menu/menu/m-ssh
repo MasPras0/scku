@@ -139,7 +139,7 @@ function Menu_Features() {
   echo -e " 11.) Auto Kill Accounts "
   echo -e " 12.) Detail Accounts"
   echo -e " 13.) Check Login UDP"
-  echo -e " 14.)  Check Users Login"
+  echo -e " 14.) Check Users Login"
   baris_panjang
   echo -e " 15.) Back to Menu"
   echo -e "  x.)  Exit"
