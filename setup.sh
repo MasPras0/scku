@@ -255,6 +255,25 @@ fun_bar() {
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
     tput cnorm
 }
+function hap(){
+domen=$(cat /etc/xray/domain)
+REPO="https://raw.githubusercontent.com/f4-izz/vip/main/install/"
+# fixhap fix Haproxy
+clear
+
+systemctl stop haproxy
+systemctl stop nginx
+wget -O /etc/haproxy/haproxy.cfg "${REPO}haproxy.cfg" >/dev/null 2>&1
+wget -O /etc/nginx/conf.d/xray.conf "${REPO}xray.conf" >/dev/null 2>&1
+sed -i "s/xxx/${domen}/g" /etc/haproxy/haproxy.cfg
+sed -i "s/xxx/${domen}/g" /etc/nginx/conf.d/xray.conf
+curl ${REPO}nginx.conf > /etc/nginx/nginx.conf
+
+cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/hap.pem
+
+systemctl restart nginx
+systemctl restart haproxy
+}
 res1() {
 wget https://raw.githubusercontent.com/MasPras0/scku/install/pointing.sh && chmod +x pointing.sh && ./pointing.sh
 clear
@@ -809,6 +828,7 @@ else
 gg="AM"
 fi
 cd
+hap
 curl -sS ifconfig.me > /etc/myipvps
 curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
 curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
