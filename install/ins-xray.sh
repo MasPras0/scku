@@ -17,11 +17,7 @@ echo -e "
 date
 echo ""
 cd
-if [[ -e /etc/xray/domain ]]; then
 domain=$(cat /etc/xray/domain)
-else
-domain="newbie.dev"
-fi
 sleep 0.5
 echo -e "[ ${green}INFO${NC} ] Checking... "
 apt install iptables iptables-persistent -y
