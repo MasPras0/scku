@@ -114,32 +114,32 @@ function Banner() {
 function Menu_Features() {
   baris_panjang
   echo -e ""
-  echo -e "  1.)  Check Users Login"
-  echo -e "  2.)  Create Accounts"
-  echo -e "  3.)  Delete Accounts"
-  echo -e "  4.)  Renew Accounts"
-  echo -e "  5.)  Trial Accounts"
+  echo -e "  1.)  Create Accounts"
+  echo -e "  2.)  Delete Accounts"
+  echo -e "  3.)  Renew Accounts"
+  echo -e "  4.)  Trial Accounts"
   baris_panjang
   MEMBER
   baris_panjang
-  echo -e "  6.)  List Member Accounts"
-  echo -e "  7.)  List Expired Accounts"
+  echo -e "  5.)  List Member Accounts"
+  echo -e "  6.)  List Expired Accounts"
   baris_panjang
   LOCK_UNLOCK
   baris_panjang
-  echo -e "  8.)  Lock Accounts"
-  echo -e "  9.)  Unlock Accounts"
+  echo -e "  7.)  Lock Accounts"
+  echo -e "  8.)  Unlock Accounts"
   baris_panjang
   LIMIT
   baris_panjang
-  echo -e " 10.) Edit Limit IP Account"
-  echo -e " 11.) Limit IP On Off Accounts"
+  echo -e " 9.) Edit Limit IP Account"
+  echo -e " 10.) Limit IP On Off Accounts"
   baris_panjang
   OTHER
   baris_panjang
-  echo -e " 12.) Auto Kill Accounts "
-  echo -e " 13.) Detail Accounts"
-  echo -e " 14.) Check Login UDP"
+  echo -e " 11.) Auto Kill Accounts "
+  echo -e " 12.) Detail Accounts"
+  echo -e " 13.) Check Login UDP"
+  echo -e " 14.)  Check Users Login"
   baris_panjang
   echo -e " 15.) Back to Menu"
   echo -e "  x.)  Exit"
@@ -152,20 +152,20 @@ Banner
 Menu_Features
 read -p "Select From Options [1-15 or x] :  " Ltt
 case $Ltt in
-1) clear ; Monitor_Ssh ;;
-2) clear ; Create_Ssh ;;
-3) clear ; Delete_Ssh ;;
-4) clear ; renew-ssh ;;
-5) clear ; Create_Trial ;;
-6) clear ; List_Member ;;
-7) clear ; Delete_Exp ;;
-8) clear ; Lock ;;
-9) clear ; Unlock ;;
-10) clear ; ganti-ip-ssh ;;
-11) clear ; Limit_On_Off ;;
-12) clear ; Check_Mullog ;;
-13) clear ; Details_Account ;;
-14) clear ; cekudp ;;
+1) clear ; Create_Ssh ;;
+2) clear ; Delete_Ssh ;;
+3) clear ; renew-ssh ;;
+4) clear ; Create_Trial ;;
+5) clear ; List_Member ;;
+6) clear ; Delete_Exp ;;
+7) clear ; Lock ;;
+8) clear ; Unlock ;;
+9) clear ; ganti-ip-ssh ;;
+10) clear ; Limit_On_Off ;;
+11) clear ; Check_Mullog ;;
+12) clear ; Details_Account ;;
+13) clear ; cekudp ;;
+14) clear ; Monitor_Ssh ;;
 15) clear ; menu ;;
 x) exit ;;
 *) m-ssh ;;
