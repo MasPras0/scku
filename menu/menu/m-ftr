@@ -13,6 +13,8 @@ BGX="\033[42m"
 END='\e[0m'
 bc="\e[5;36m"
 ungu='\033[0;35m'
+BG_UNGU="\033[45;1m"
+pink="\033[1;35m"
 Green_background="\033[42;37m"
 Red_background="\033[41;37m"
 Suffix="\033[0m"
@@ -39,32 +41,32 @@ baris_panjang
 }
 
 function baris_panjang() {
-  echo -e "${BlueCyan} ———————————————————————————————————————${Xark}"
+  echo -e "${pink} ──────────────────────────────────────${Xark}"
 }
 function ATAS() {
-  echo -e     "${ungu}                FEATURES               ${Xark} "
+  echo -e  " ${BG_UNGU}\e[97m                FEATURES              ${Xark} "
 }
 
 function  FIXX() {
-  echo -e  " ${BG_BLU}               MENU FIXX              ${Xark}"
+  echo -e  " ${BG_UNGU}\e[97m               MENU FIXX              ${Xark}"
 }
 
 function  ADMIN() {
-  echo -e  " ${BG_BLU}               ADMIN AKSES              ${Xark}"
+  echo -e  " ${BG_UNGU}\e[97m              ADMIN AKSES             ${Xark}"
 }
 
 function  CLEAR() {
-  echo -e  " ${BG_BLU}               MENU CLEAR             ${Xark}"
+  echo -e  " ${BG_UNGU}\e[97m               MENU CLEAR             ${Xark}"
 }
 
 
 function  INFORMATION() {
-  echo -e  " ${BG_BLU}              INFORMATION             ${Xark}"
+  echo -e  " ${BG_UNGU}\e[97m              INFORMATION             ${Xark}"
 }
 
 
 function  OTHER() {
-  echo -e  " ${BG_BLU}                OTHER                 ${Xark}"
+  echo -e  " ${BG_UNGU}\e[97m                OTHER                 ${Xark}"
 }
 
 
@@ -87,8 +89,6 @@ baris_panjang
 
 
 function Menu_Lambofgod() {
-baris_panjang
-echo -e ""
 echo -e "  1.) Running Service    "  
 echo -e "  2.) Restart Service    " 
 echo -e "  3.) Auto Reboot	  " 
