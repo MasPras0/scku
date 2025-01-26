@@ -7,23 +7,23 @@ yellow='\e[33m'
 WhiteBe='\e[5;37m'
 GreenBe='\e[5;32m'
 BlueCyan='\e[5;36m'
+pink="\033[1;35m"
+BG_UNGU="\033[45;1m"
 Xark='\e[0m'
 r="\033[1;91m"
 BG_BLU="\033[44;1m" # BG BIRU
 GREN="\033[92m"
+BG_RED='\e[41m'
 clear
 
 function baris_panjang() {
-  echo -e "${BlueCyan} ———————————————————————————————————————${Xark}"
-}
-function ATAS() {
-  echo -e     " ${BG_BLU}                  XRAY                 ${Xark} "
+  echo -e "${pink}────────────────────────────────────────${Xark}"
 }
 function xVMESS() {
-  echo -e     " ${BG_BLU}               XRAY VMESS              ${Xark} "
+  echo -e     "${BG_UNGU}\e[97m                XRAY VMESS              ${Xark} "
 }
 function xVLESS() {
-  echo -e     " ${BG_BLU}               XRAY VLESS              ${Xark} "
+  echo -e     "${BG_UNGU}\e[97m                XRAY VLESS              ${Xark} "
 }
 # . 1 Membuat Account Vmess
 function Create_Account() {
@@ -156,76 +156,70 @@ function Recovery_Vless() {
 # . Banner Vmess
 function Banner() {
   baris_panjang
-  ATAS
+  xVMESS
   baris_panjang
 }
 
 # . Daftar Menu Vmess
 function Menu_Features() {
-  baris_panjang
-  echo -e ""
-  echo -e "  1.)  Check Users Login"
-  echo -e "  2.)  List Member" 
-  baris_panjang
-  xVMESS               
-  baris_panjang
-  echo -e "  3.)  Create Account Vmess"
-  echo -e "  4.)  Trial Account Vmess"
-  echo -e "  5.)  Delete Account Vmess"
-  echo -e "  6.)  Renew Account Vmess"
-  echo -e "  7.)  Check Config Account"
-  echo -e "  8.)  Recovery Account"
-  echo -e "  9.)  Edit Limit IP Account"
-  echo -e " 10.)  Edit Limit Bandwidth Account"
-  echo -e " 11.)  Lock Account"
-  echo -e " 12.)  Unlock Account"
+  echo -e "  1.)  Create Account Vmess"
+  echo -e "  2.)  Trial Account Vmess"
+  echo -e "  3.)  Delete Account Vmess"
+  echo -e "  4.)  Renew Account Vmess"
+  echo -e "  5.)  Check Config Account"
+  echo -e "  6.)  Recovery Account"
+  echo -e "  7.)  Edit Limit IP Account"
+  echo -e "  8.)  Edit Limit Bandwidth Account"
+  echo -e "  9.)  Lock Account"
+  echo -e " 10.)  Unlock Account"
   baris_panjang
   xVLESS              
   baris_panjang
-  echo -e " 13.)  Create Account Vless"
-  echo -e " 14.)  Trial Account Vless"
-  echo -e " 15.)  Delete Account Vless"
-  echo -e " 16.)  Renew Account Vless"
-  echo -e " 17.)  Check Config Account"
-  echo -e " 18.)  Recovery Account"
-  echo -e " 19.)  Edit Limit IP Account"
-  echo -e " 20.)  Edit Limit Bandwidth Account"
-  echo -e " 21.)  Lock Account"
-  echo -e " 22.)  Unlock Account"
+  echo -e " 11.)  Create Account Vless"
+  echo -e " 12.)  Trial Account Vless"
+  echo -e " 13.)  Delete Account Vless"
+  echo -e " 14.)  Renew Account Vless"
+  echo -e " 15.)  Check Config Account"
+  echo -e " 16.)  Recovery Account"
+  echo -e " 17.)  Edit Limit IP Account"
+  echo -e " 18.)  Edit Limit Bandwidth Account"
+  echo -e " 19.)  Lock Account"
+  echo -e " 20.)  Unlock Account"
  baris_panjang
- echo -e "  23.)  Back to Menu"
- echo -e "   x.)  Exit"
- echo " "
- baris_panjang
+  echo -e " 21.)  Check Users Login"
+  echo -e " 22.)  List Member" 
+  echo -e " 23.)  Back to Menu"
+  echo -e "  x.)  Exit"
+  echo " "
  baris_panjang
 }
 
 Banner
 Menu_Features
-read -p "Select From Options [1-25 or x] :  " Ltt
-case $Ltt in
-1) clear ; Check_Account ;;
-2) clear ; List_Member ;;
-3) clear ; Create_Account ;;
-4) clear ; Create_Trial ;;
-5) clear ; Delete_Account ;;
-6) clear ; Renew_Account ;;
-7) clear ; Detail_Config_Vmess ;;
-8) clear ; Recovery_Vmess ;;
-9) clear ; Change_Ip_Vmess ;;
-10) clear ; Changes_Limit_Quota ;;
-11) clear ; Lock_Account_Vmess ;;
-12) clear ; Unlock_Account_Vmess ;;
-13) clear ; Create_Account_Vless ;;
-14) clear ; Create_Trial_Vless ;;
-15) clear ; Delete_Account_Vless ;;
-16) clear ; Renew_Account_Vless ;;
-17) clear ; Detail_Config_Vless ;;
-18) clear ; Recovery_Vless ;;
-19) clear ; Change_Ip_Vless;;
-20) clear ; Changes_Limit_Quota_Vless ;;
-21) clear ; Lock_Account_Vless ;;
-22) clear ; Unlock_Account_Vless ;;
+read -p "Select From Options [1-23 or x] :  " prass
+case $prass in
+1) clear ; Create_Account ;;
+2) clear ; Create_Trial ;;
+3) clear ; Delete_Account ;;
+4) clear ; Renew_Account ;;
+5) clear ; Detail_Config_Vmess ;;
+6) clear ; Recovery_Vmess ;;
+7) clear ; Change_Ip_Vmess ;;
+8) clear ; Changes_Limit_Quota ;;
+9) clear ; Lock_Account_Vmess ;;
+10) clear ; Unlock_Account_Vmess ;;
+11) clear ; Create_Account_Vless ;;
+12) clear ; Create_Trial_Vless ;;
+13) clear ; Delete_Account_Vless ;;
+14) clear ; Renew_Account_Vless ;;
+15) clear ; Detail_Config_Vless ;;
+16) clear ; Recovery_Vless ;;
+17) clear ; Change_Ip_Vless;;
+18) clear ; Changes_Limit_Quota_Vless ;;
+19) clear ; Lock_Account_Vless ;;
+20) clear ; Unlock_Account_Vless ;;
+21) clear ; Check_Account ;;
+22) clear ; List_Member ;;
 23) clear ; menu ;;
 x) exit ;;
 *) m-xray ;;
