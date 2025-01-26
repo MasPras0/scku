@@ -7,6 +7,8 @@ yellow='\e[33m'
 WhiteBe='\e[5;37m'
 GreenBe='\e[5;32m'
 BlueCyan='\e[5;36m'
+BG_UNGU="\033[45;1m"
+pink="\033[1;35m"
 BLUE="\033[4;34m"
 BG_BLU="\033[44;1m" # BG BIRU
 Xark='\e[0m'
@@ -14,22 +16,10 @@ GREN="\033[92m"
 clear
 
 function baris_panjang() {
-  echo -e "${BlueCyan} ———————————————————————————————————————${Xark}"
+  echo -e "${pink}────────────────────────────────────────${Xark}"
 }
 function ATAS() {
-  echo -e     "${ungu}         SSH-Dropbear-OpenVPN           ${Xark} "
-}
-function  MEMBER() {
-  echo -e  " ${BG_BLU}                MEMBER                 ${Xark}"
-}
-function  LOCK_UNLOCK() {
-  echo -e  " ${BG_BLU}             LOCK & UNLOCK             ${Xark}"
-}
-function  LIMIT() {
-  echo -e  " ${BG_BLU}                 LIMIT                 ${Xark}"
-}
-function  OTHER() {
-  echo -e  " ${BG_BLU}                 OTHER                 ${Xark}"
+  echo -e     "${BG_UNGU}\e[97m         SSH-Dropbear-OpenVPN           ${Xark} "
 }
 
 # . Create Ssh
@@ -112,46 +102,29 @@ function Banner() {
   baris_panjang
 }
 function Menu_Features() {
-  baris_panjang
-  echo -e ""
   echo -e "  1.)  Create Accounts"
   echo -e "  2.)  Delete Accounts"
   echo -e "  3.)  Renew Accounts"
   echo -e "  4.)  Trial Accounts"
-  baris_panjang
-  MEMBER
-  baris_panjang
   echo -e "  5.)  List Member Accounts"
   echo -e "  6.)  List Expired Accounts"
-  baris_panjang
-  LOCK_UNLOCK
-  baris_panjang
   echo -e "  7.)  Lock Accounts"
   echo -e "  8.)  Unlock Accounts"
-  baris_panjang
-  LIMIT
-  baris_panjang
-  echo -e " 9.) Edit Limit IP Account"
-  echo -e " 10.) Limit IP On Off Accounts"
-  baris_panjang
-  OTHER
-  baris_panjang
-  echo -e " 11.) Auto Kill Accounts "
-  echo -e " 12.) Detail Accounts"
-  echo -e " 13.) Check Login UDP"
-  echo -e " 14.) Check Users Login"
-  baris_panjang
-  echo -e " 15.) Back to Menu"
+  echo -e "  9.)  Edit Limit IP Account"
+  echo -e " 10.)  Limit IP On Off Accounts"
+  echo -e " 11.)  Auto Kill Accounts "
+  echo -e " 12.)  Detail Accounts"
+  echo -e " 13.)  Check Users Login"
+  echo -e " 14.)  Check Login UDP"
+  echo -e " 15.)  Back to Menu"
   echo -e "  x.)  Exit"
-  echo -e " "
-  baris_panjang
   baris_panjang
 }
 
 Banner
 Menu_Features
-read -p "Select From Options [1-15 or x] :  " Ltt
-case $Ltt in
+read -p "Select From Options [1-15 or x] :  " prass
+case $prass in
 1) clear ; Create_Ssh ;;
 2) clear ; Delete_Ssh ;;
 3) clear ; renew-ssh ;;
@@ -164,8 +137,8 @@ case $Ltt in
 10) clear ; Limit_On_Off ;;
 11) clear ; Check_Mullog ;;
 12) clear ; Details_Account ;;
-13) clear ; cekudp ;;
-14) clear ; Monitor_Ssh ;;
+13) clear ; Monitor_Ssh ;;
+14) clear ; cekudp ;;
 15) clear ; menu ;;
 x) exit ;;
 *) m-ssh ;;
