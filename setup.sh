@@ -747,8 +747,6 @@ TEXT="
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <code>NAME : </code><code>${author}</code>
 <code>TIME : </code><code>${TIME} WIB</code>
-<code>DOMAIN : </code><code>${domain}</code>
-<code>IP : </code><code>${MYIP}</code>
 <code>ISP : </code><code>${ISP} $CITY</code>
 <code>OS LINUX : </code><code>${MODEL2}</code>
 <code>RAM : </code><code>${RAMMS} MB</code>
