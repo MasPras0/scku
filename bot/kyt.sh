@@ -18,6 +18,7 @@ rm *.session
 rm bot.*
 apt update && apt upgrade
 apt install neofetch -y
+apt install python3-telethon
 apt install python3 python3-pip git
 cd /usr/bin
 wget https://raw.githubusercontent.com/MasPras0/scku/main/bot/bot.zip
