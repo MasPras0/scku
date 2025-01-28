@@ -1,9 +1,5 @@
 #!/bin/bash
-if command -v 7z &> /dev/null; then
-    echo -ne
-else
-apt install p7zip-full -y
-fi
+
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 REPO="https://raw.githubusercontent.com/MasPras0/scku/main/"
