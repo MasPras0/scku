@@ -7,10 +7,10 @@ REPO="https://raw.githubusercontent.com/MasPras0/scku/main/"
 echo -e " [INFO] Downloading File"
 sleep 2
 rm /usr/local/sbin/*
-wget ${REPO}menu/menu.zip >/dev/null
+wget -q ${REPO}menu/menu.zip 
 wget -q -O /usr/bin/enc "${REPO}install/encrypt" ; chmod +x /usr/bin/enc
 #7z x -pas123@Rht menu.zip
-unzip menu.zip >/dev/null
+unzip -q -q menu.zip >/dev/null
 chmod +x menu/*
 enc menu/*
 mv menu/* /usr/local/sbin
