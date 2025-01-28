@@ -329,20 +329,18 @@ echo -e "${green}┌────────────────────
 echo -e "${green}│ \033[1;37mPlease select a your Choice to Set Domain${green}│${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 echo -e "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e "${green}│  [ 1 ]  \033[1;37mDomain xxx.palon.store          ${NC}"
-echo -e "${green}│  [ 2 ]  \033[1;37mDomain xxx.sabdo.my.id          ${NC}"
-echo -e "${green}│  [ 3 ]  \033[1;37mDomain xxx.sps.biz.id          ${NC}"
-echo -e "${green}│  [ 4 ]  \033[1;37mDomain xxx.spsgroup.engineer          ${NC}"                                        
+echo -e "${green}│  [ 1 ]  \033[1;37mDomain xxx.server-terbaik.my.id          ${NC}"
+echo -e "${green}│  [ 2 ]  \033[1;37mDomain xxx.wozz.web.id          ${NC}"                                  
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
-until [[ $domain2 =~ ^[1-4]+$ ]]; do 
-read -p "   Please select numbers 1 sampai 4 : " domain2
+until [[ $domain2 =~ ^[1-2]+$ ]]; do 
+read -p "   Please select numbers 1 sampai 2 : " domain2
 done
 fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${green}│  \033[1;37mContoh subdomain xxx.palon.store        ${green}│${NC}"
-echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}│${NC}"
+echo -e  "${green}│  \033[1;37mContoh subdomain xxx.server-terbaik.my.id        ${green}${NC}"
+echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}${NC}"
 echo -e  "${green}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -376,8 +374,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${green}│  \033[1;37mContoh subdomain xxx.sabdo.my.id        ${green}│${NC}"
-echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}│${NC}"
+echo -e  "${green}│  \033[1;37mContoh subdomain xxx.server-terbaik.my.id        ${green}${NC}"
+echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}${NC}"
 echo -e  "${green}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -409,8 +407,8 @@ clear
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${green}│  \033[1;37mContoh subdomain xxx.sps.biz.id         ${green}│${NC}"
-echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}│${NC}"
+echo -e  "${green}│  \033[1;37mContoh subdomain xxx.server-terbaik.my.id         ${green}${NC}"
+echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}${NC}"
 echo -e  "${green}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn3 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -443,8 +441,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "4" ]]; then
 clear
 echo -e  "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${green}│  \033[1;37mContoh subdomain xxx.spsgroup.engineer  ${green}│${NC}"
-echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu               ${green}│${NC}"
+echo -e  "${green}│  \033[1;37mContoh subdomain xxx.server-terbaik.my.id  ${green}${NC}"
+echo -e  "${green}│    \033[1;37mxxx jadi subdomain kamu                  ${green}${NC}"
 echo -e  "${green}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn4 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
