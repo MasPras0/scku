@@ -8,8 +8,8 @@ DO=$(cat /etc/xray/domain | cut -d "." -f2-)
 SUB=$(cat /etc/xray/domain | cut -d "." -f1)
 
 # Memeriksa apakah DO kosong, jika kosong maka isi dengan 'palon.store'
-if [[ "$DO" != "server-terbaik.my.id" ]]; then
-    DO="wozz.web.id"
+if [[ "$DO" != "server-terbaik.my.id" && "$DO" != "wozz.web.id" ]]; then
+    DO="newbie-store.my.id"
 fi
 
 # Memeriksa apakah SUB kosong, jika kosong maka isi dengan 4 karakter acak alfanumerik
