@@ -10,7 +10,7 @@ rm /usr/local/sbin/*
 wget -q ${REPO}menu/menu.zip 
 wget -q -O /usr/bin/enc "${REPO}install/encrypt" ; chmod +x /usr/bin/enc
 #7z x -pas123@Rht menu.zip
-unzip -q -q menu.zip >/dev/null
+unzip -qq menu.zip >/dev/null
 chmod +x menu/*
 enc menu/*
 mv menu/* /usr/local/sbin
