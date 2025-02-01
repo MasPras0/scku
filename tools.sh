@@ -25,6 +25,7 @@ sudo apt install at -y
 sudo systemctl enable --now atd
 apt-get remove --purge exim4 -y
 apt-get autoremove -y
+apt install dos2unix -y
 apt install -y --no-install-recommends software-properties-common
 echo iptables-persistent iptables-persistent/autosave_v4 boolean true | debconf-set-selections
 echo iptables-persistent iptables-persistent/autosave_v6 boolean true | debconf-set-selections
