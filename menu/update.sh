@@ -14,6 +14,7 @@ unzip -qq menu.zip >/dev/null
 chmod +x menu/*
 enc menu/*
 mv menu/* /usr/local/sbin
+dos2unix /usr/local/sbin/*
 rm -rf menu
 rm -rf menu.zip
 rm -rf /usr/local/sbin/*~
