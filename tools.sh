@@ -43,7 +43,7 @@ sudo apt-get -y --purge remove apache2* >/dev/null 2>&1
 sudo apt-get -y --purge remove bind9* >/dev/null 2>&1
 sudo apt-get -y remove sendmail* >/dev/null 2>&1
 apt autoremove -y >/dev/null 2>&1
-# finishing
+# finishing kepo ya
 
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "Dependencies successfully installed..."
