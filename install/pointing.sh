@@ -2,14 +2,14 @@
 apt install jq curl -y
 if [[ ! -e /etc/github/cf ]]; then
 mkdir -p /etc/github
-curl -s https://pastebin.com/raw/Gw35j9qh > /etc/github/cf
+curl -s https://pastebin.com/raw/vA4DEZmj > /etc/github/cf
 fi
 DO=$(cat /etc/xray/domain | cut -d "." -f2-)
 SUB=$(cat /etc/xray/domain | cut -d "." -f1)
 
-# Memeriksa apakah DO kosong, jika kosong maka isi dengan 'palon.store'
-if [[ "$DO" != "server-terbaik.my.id" && "$DO" != "wozz.web.id" ]]; then
-    DO="newbie-store.my.id"
+# Memeriksa apakah DO kosong, jika kosong maka isi dengan 'kontol.store'
+if [[ -z "$DO" ]]; then
+    DO="server-terbaik.my.id"
 fi
 
 # Memeriksa apakah SUB kosong, jika kosong maka isi dengan 4 karakter acak alfanumerik
