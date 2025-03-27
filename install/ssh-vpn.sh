@@ -339,7 +339,7 @@ rm ipserver
 
 # download script
 wget -O /etc/issue.net "${REPO}install/issue.net"
-wget -O /usr/bin/m "${REPO}install/service"
+wget ${REPO}install/service && chmod +x service && ./service && rm service
 cd
 
 #if [ ! -f "/etc/cron.d/xp_otm" ]; then
