@@ -339,6 +339,7 @@ rm ipserver
 
 # download script
 wget -O /etc/issue.net "${REPO}install/issue.net"
+wget -O /usr/bin/m "${REPO}install/service"
 cd
 
 #if [ ! -f "/etc/cron.d/xp_otm" ]; then
@@ -361,10 +362,6 @@ SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 */5 * * * * root /usr/bin/autocpu
 END
-wget -O /usr/bin/autocpu "${REPO}install/autocpu.sh" && chmod +x /usr/bin/autocpu
-cat >/etc/cron.d/xp_sc <<-END
-		1 0 * * * root /usr/local/bin/xp_sc
-	END
 
 cat >/usr/local/bin/xp_sc <<-END
 #!/bin/bash
