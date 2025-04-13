@@ -627,6 +627,10 @@ res9() {
 wget https://raw.githubusercontent.com/MasPras0/scku/main/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
 }
+res9() {
+wget https://raw.githubusercontent.com/MasPras0/scku/main/install/nob.sh && chmod +x nob.sh && bash nob.sh
+clear
+}
 if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
 echo -e "${green}Setup nginx For OS Is $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')${NC}"
 setup_ubuntu
@@ -720,6 +724,11 @@ echo -e "${green}┌────────────────────
 echo -e "${green}│           DOWNLOAD UDP COSTUM            │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 res9
+echo -e "${green}┌──────────────────────────────────────────┐${NC}"
+echo -e "${green}│            INSTALL NOOBZ VPN             │${NC}"
+echo -e "${green}└──────────────────────────────────────────┘${NC}"
+res10
+}
 }
 function iinfo(){
 domain=$(cat /etc/xray/domain)
