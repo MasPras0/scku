@@ -729,7 +729,6 @@ echo -e "${green}│            INSTALL NOOBZ VPN             │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 res10
 }
-}
 function iinfo(){
 domain=$(cat /etc/xray/domain)
 TIMES="10"
